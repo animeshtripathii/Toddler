@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Rights - Learn About Your Rights</title>
+  
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/child.css">
+  
+  <!-- Inline styles to ensure visibility -->
+  <style>
+    body {
+      background-color: #f8f6ff !important;  /* Soft lavender background */
+      margin: 0 !important;
+      padding: 0 !important;
+      font-family: 'Nunito', sans-serif !important;
+    }
+    
+    .rights-banner {
+      background: linear-gradient(rgba(149, 117, 205, 0.9), rgba(179, 157, 219, 0.9)), url('images/banner.png') !important;
+      background-size: cover !important;
+      background-position: center !important;
+      padding: 15rem 7% 8rem !important;
+      text-align: center !important;
+      color: white !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+      z-index: 2 !important;
+      position: relative !important;
+    }
+    
+    .rights-banner h1 {
+      color: white !important;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    .rights-banner p {
+      color: white !important;
+    }
+    
+    .rights-container {
+      background-color: #f8f6ff !important;  /* Soft lavender background */
+    }
+    
+    .right-card {
+      background-color: #ffffff !important;  /* White background */
+      border-left: 5px solid #9575cd !important; /* Medium purple */
+      border: 1px solid #e6e0ff !important; /* Light purple border */
+      box-shadow: 0 2px 8px rgba(149, 117, 205, 0.15) !important; /* Purple shadow */
+    }
+    
+    .right-content {
+      background-color: #ffffff !important;  /* White background */
+    }
+    
+    .right-content h2 {
+      color: #7e57c2 !important;  /* Deeper purple */
+    }
+    
+    .right-content p {
+      color: #555555 !important;  /* Medium gray text */
+    }
+    
+    .stat-card {
+      background-color: #ffffff !important;  /* White background */
+      border-top: 4px solid #9575cd !important;  /* Medium purple */
+      border: 1px solid #e6e0ff !important; /* Light purple border */
+      box-shadow: 0 2px 8px rgba(149, 117, 205, 0.15) !important; /* Purple shadow */
+    }
+    
+    .child-rights-quote {
+      background-color: #ffffff !important;  /* White background */
+      border-left: 5px solid #9575cd !important;  /* Medium purple */
+      border: 1px solid #e6e0ff !important; /* Light purple border */
+      box-shadow: 0 2px 8px rgba(149, 117, 205, 0.15) !important; /* Purple shadow */
+    }
+    
+    .child-rights-quote p {
+      color: #555555 !important;  /* Medium gray text */
+    }
+    
+    .child-rights-quote cite {
+      color: #9575cd !important;  /* Medium purple */
+    }
+    
+    /* Make text visible in CTA section */
+    .cta-section h2, 
+    .cta-section p {
+      color: white !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Fix text visibility in footer */
+    .footer {
+      background-color: #f8f6ff !important;  /* Soft lavender background */
+      border-top: 1px solid #e6e0ff !important; /* Light purple border */
+    }
+    
+    .footer .box-container .box a {
+      color: #555555 !important;  /* Medium gray text */
+    }
+    
+    .footer .credit {
+      color: #555555 !important;  /* Medium gray text */
+    }
+    
+    /* Fix navbar styling */
+    .header .navbar {
+      background-color: #f8f6ff !important;  /* Soft lavender background */
+      position: absolute !important;
+      top: 115% !important;
+      right: 7% !important;
+      background: #ffffff !important; /* White background */
+      border-radius: 0.5rem !important;
+      box-shadow: 0 2px 8px rgba(149, 117, 205, 0.15) !important; /* Purple shadow */
+      width: 25rem !important;
+      transform: scale(0) !important;
+      transform-origin: top right !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      padding: 1rem !important;
+      z-index: 1000 !important;
+      border: 1px solid #e6e0ff !important; /* Light purple border */
+    }
+    
+    .header .navbar.active {
+      transform: scale(1) !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    
+    .header .navbar a {
+      display: block !important;
+      margin: 0.8rem 0 !important;
+      padding: 1.2rem 1.5rem !important;
+      font-size: 1.6rem !important;
+      color: #555555 !important;  /* Medium gray text */
+      border-radius: 0.25rem !important;
+      font-weight: 600 !important;
+    }
+    
+    .header .navbar a.active,
+    .header .navbar a:hover {
+      color: #5e35b1 !important;  /* Deep purple */
+      background-color: #ede7f6 !important;  /* Very light purple */
+      padding-left: 2rem !important;
+      border-left: 2px solid #9575cd !important;  /* Medium purple */
+    }
+    
+    /* Search form styles */
+    .header .search-form {
+      background: #ffffff !important;  /* White background */
+      border-radius: 0.5rem !important;
+      display: flex !important;
+      align-items: center !important;
+      height: 4.5rem !important;
+      overflow: hidden !important;
+      width: 50rem !important;
+      border: 1px solid #e6e0ff !important; /* Light purple border */
+    }
+    
+    .header .search-form input {
+      height: 100% !important;
+      width: 100% !important;
+      background: none !important;
+      text-transform: none !important;
+      font-size: 1.5rem !important;
+      color: #555555 !important;  /* Medium gray text */
+      padding: 0 1.5rem !important;
+    }
+    
+    .header .search-form label {
+      font-size: 1.8rem !important;
+      margin-right: 1.5rem !important;
+      color: #9575cd !important;  /* Medium purple */
+      cursor: pointer !important;
+    }
+    
+    /* Icon styles */
+    .header .icons div {
+      height: 4.5rem !important;
+      width: 4.5rem !important;
+      line-height: 4.5rem !important;
+      font-size: 2rem !important;
+      border-radius: 0.5rem !important;
+      margin-left: 0.5rem !important;
+      background: #ffffff !important;  /* White background */
+      color: #555555 !important;  /* Medium gray text */
+      cursor: pointer !important;
+      text-align: center !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+      border: 1px solid #e6e0ff !important; /* Light purple border */
+    }
+    
+    .header .icons div:hover {
+      color: #ffffff !important;  /* White text */
+      background: #9575cd !important;  /* Medium purple */
+    }
+    
+    /* CTA button styles */
+    .cta-btn.primary-btn {
+      background-color: #9575cd !important; /* Medium purple */
+      color: white !important;
+      border-radius: 30px !important;
+      border: 3px solid #9575cd !important; /* Medium purple */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .cta-btn.secondary-btn {
+      background-color: #b39ddb !important; /* Light purple */
+      color: white !important;
+      border-radius: 30px !important;
+      border: 3px solid #b39ddb !important; /* Light purple */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .cta-section {
+      background: linear-gradient(rgba(149, 117, 205, 0.9), rgba(179, 157, 219, 0.9)) !important; /* Purple gradient */
+    }
+    
+    .stat-card .number {
+      color: #9575cd !important; /* Medium purple */
+    }
+    
+    /* Additional overrides to ensure visibility */
+    .right-image {
+      background-color: #ffffff !important; /* White background */
+    }
+    
+    .stat-card .description {
+      color: #555555 !important; /* Medium gray text */
+    }
+  </style>
+</head>
+
+<body class="rights-page">
+  <!-- Header section starts -->
+  <header class="header">
+    <a href="index.html" class="logo">
+        <i class="fas fa-child"></i> Time Ahead Toddlers
+    </a>
+    
+    <form action="https://www.google.com/search" class="search-form">
+        <input type="text" placeholder="Search in Google" name="q" id="searchBox">
+        <label for="searchBox" class="fas fa-search"></label>
+    </form>
+    
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-share" id="theme-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+    
+    <nav class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="Quiz.html"><i class="fas fa-gamepad"></i> Games</a>
+        <a href="rights.html" class="active"><i class="fas fa-child"></i> Child Rights</a>
+        <a href="index.html#contact"><i class="fas fa-phone"></i> Helpline</a>
+        <a href="https://www.unicef.org/blog"><i class="fas fa-blog"></i> Blogs</a>
+    </nav>
+  </header>
+  <!-- Header section ends -->
+
+  <!-- Rights banner section -->
+  <div class="rights-banner">
+    <h1 data-aos="fade-up">Know Your Rights</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Learn about the laws and rights that protect you and help you grow safely</p>
+  </div>
+
+  <!-- Rights content section -->
+  <main class="rights-container">
+    <!-- Statistics section -->
+    <div class="child-rights-statistics" data-aos="fade-up">
+      <div class="stat-card">
+        <div class="number">1989</div>
+        <div class="description">Year the UN Convention on the Rights of the Child was adopted</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">196</div>
+        <div class="description">Countries that have ratified the Convention</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">54</div>
+        <div class="description">Articles in the Convention covering all aspects of a child's life</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">18</div>
+        <div class="description">Age until which you are protected as a child</div>
+      </div>
+    </div>
+
+    <!-- Inspirational quote -->
+    <div class="child-rights-quote" data-aos="fade-up">
+      <p>"There can be no keener revelation of a society's soul than the way in which it treats its children."</p>
+      <cite>— Nelson Mandela</cite>
+    </div>
+
+    <div class="right-card" data-aos="fade-up">
+      <div class="right-image">
+        <img src="images/pocso.webp" alt="POCSO Act">
+      </div>
+      <div class="right-content">
+        <h2>The Protection of Children from Sexual Offences Act (2012)</h2>
+        <p>The POCSO Act stands for Protection of Children from Sexual Offences Act, 2012. It is a comprehensive law that aims to protect children from sexual abuse, exploitation and pornography in India.</p>
+        <p>The POCSO Act is a gender-neutral law, meaning it applies to both boys and girls who are below the age of 18 years. It also does not discriminate between the perpetrators of child sexual abuse based on their gender.</p>
+        <p>The POCSO Act defines various forms of sexual offences against children and prescribes strict punishments for these offences, ranging from imprisonment for 3 years to life imprisonment, and fine.</p>
+      </div>
+    </div>
+
+    <div class="right-card" data-aos="fade-up">
+      <div class="right-image">
+        <img src="images/juve.jpg" alt="Juvenile Justice Act">
+      </div>
+      <div class="right-content">
+        <h2>Juvenile Justice Act (2015)</h2>
+        <p>The Juvenile Act is a law that deals with children who are in conflict with the law or in need of care and protection in India.</p>
+        <p>The Juvenile Act was first enacted in 1986 and then amended in 2000 and 2015. The latest amendment was in 2018, which aimed to streamline the adoption process and empower the district magistrates to oversee the functioning of various agencies under the Act.</p>
+        <p>The Juvenile Act defines a child as anyone who is below the age of 18 years. However, it also allows for the trial of a child as an adult if they are accused of committing a heinous offence and are found to be mature enough to understand the consequences of the act by a Juvenile Justice Board.</p>
+      </div>
+    </div>
+
+    <div class="right-card" data-aos="fade-up">
+      <div class="right-image">
+        <img src="images/RIGHT.jpg" alt="Right to Education">
+      </div>
+      <div class="right-content">
+        <h2>Right to Education Act (2009)</h2>
+        <p>The Right of Children to Free and Compulsory Education Act (RTE) was passed by the Indian Parliament in 2009. The RTE Act describes how free and compulsory education is important for children between the ages of 6 and 14.</p>
+        <p>The RTE Act also states that education up to the age of 14 is a fundamental right and should be free and compulsory.</p>
+        <p>Education can help reduce poverty, social inequalities, and empower individuals. It can also help individuals reach their full potential, bring economic returns for a country, and help societies achieve sustainable development and lasting peace. For a brighter and peaceful future, we need education.</p>
+      </div>
+    </div>
+
+    <div class="right-card" data-aos="fade-up">
+      <div class="right-image">
+        <img src="images/CLOB.jpg" alt="Child Labour Act">
+      </div>
+      <div class="right-content">
+        <h2>Child Labour Act (1986)</h2>
+        <p>The Child and Adolescent Labour (Prohibition and Regulation) Act, 1986 prohibits the employment of children under 14 years old in certain occupations and processes.</p>
+        <p>Your health and safety is more important than a handful amount of money. So kids, you do not have to work until you are 14.</p>
+      </div>
+    </div>
+
+   
+
+    <div class="right-card" data-aos="fade-up">
+      <div class="right-image">
+        <img src="images/health.jpg" alt="Right to Health">
+      </div>
+      <div class="right-content">
+        <h2>Right to Health</h2>
+        <p>The right to health care for children is a fundamental component of international human rights law. The Convention on the Rights of the Child, adopted by the United Nations General Assembly, emphasizes the right of children to access essential health care services.</p>
+        <p>Additionally, the Universal Declaration of Human Rights and various international legal instruments enshrine the right of children to the highest attainable standard of physical and mental health.</p>
+        <p>This right underlines the importance of providing children with access to adequate health care, including preventive, curative, and rehabilitative services, with a focus on ensuring their well-being and development.</p>
+      </div>
+    </div>
+
+    <div class="right-card" data-aos="fade-up">
+      <div class="right-image">
+        <img src="images/exp.jpg" alt="Right to Expression">
+      </div>
+      <div class="right-content">
+        <h2>Right to Expression</h2>
+        <p>The Right to Expression is a fundamental human right enshrined in various international and national laws. It encompasses the freedom to express one's opinions, ideas, and beliefs without censorship or restraint.</p>
+        <p>This right includes the freedom of speech, press, assembly, and association, allowing individuals to participate in public discourse, criticize government actions, and advocate for social change.</p>
+        <p>In India, the Right to Expression is protected under Article 19 of the Constitution, subject to reasonable restrictions in the interest of sovereignty, security, public order, decency, or morality.</p>
+      </div>
+    </div>
+
+    <div class="right-card" data-aos="fade-up">
+      <div class="right-image">
+        <img src="images/GOOD.jpg" alt="Good Touch Bad Touch">
+      </div>
+      <div class="right-content">
+        <h2>Good Touch Bad Touch</h2>
+        <p><strong>Good Touch:</strong> Good touch is any physical contact that makes you feel safe, happy, and comfortable. Examples of good touches include hugs from family and friends, high fives, and handshakes. It's important to remember that good touches should always happen with permission and should never make you feel uncomfortable.</p>
+        <p><strong>Bad Touch:</strong> Bad touch is any physical contact that makes you feel scared, confused, or uncomfortable. Examples of bad touches include someone touching your private parts in a way that makes you feel uneasy or scared, or someone trying to keep a touch a secret from you or others. It's important to know that it's okay to say no to a bad touch and to tell a trusted adult about it.</p>
+      </div>
+    </div>
+
+    <div class="right-card" data-aos="fade-up">
+      <div class="right-image">
+        <img src="images/stran.jpg" alt="Strangers are Danger">
+      </div>
+      <div class="right-content">
+        <h2>Strangers are Danger</h2>
+        <p>Stranger danger refers to the potential risks and dangers children may face when encountering unknown individuals. Not all strangers are harmful, but teaching kids to differentiate between safe and potentially dangerous interactions is crucial.</p>
+        <p>Child abduction and abuse are serious issues globally. Approximately 800,000 children go missing in the United States each year. While not all cases involve stranger abduction, educating kids about potential risks is vital.</p>
+        <p>Educating children about stranger danger empowers them to make informed choices. By fostering open communication and awareness, we can help our kids stay safe. Remember, their well-being is our priority!</p>
+      </div>
+    </div>
+
+    <!-- Another inspirational quote -->
+    <div class="child-rights-quote" data-aos="fade-up">
+      <p>"Children are not things to be molded, but are people to be unfolded."</p>
+      <cite>— Jess Lair</cite>
+    </div>
+  </main>
+   <!-- Add CTA section in the middle -->
+   <div class="cta-section" data-aos="fade-up">
+    <h2>Help Protect Children's Rights</h2>
+    <p>Everyone has a role to play in ensuring children's rights are protected. Whether you're a child, parent, teacher, or concerned citizen, you can make a difference.</p>
+    <div class="cta-buttons">
+      <a href="https://www.unicef.org/child-rights-convention/what-you-can-do" class="cta-btn primary-btn">Take Action</a>
+      <a href="https://www.unicef.org/child-rights-convention" class="cta-btn secondary-btn">Learn More</a>
+    </div>
+  </div>
+
+  <!-- Footer section -->
+  <section class="footer" id="contact">
+    <div class="box-container">
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <h3>Our Branches</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> India </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Russia </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Canada </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+        </div>
+        
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <h3>Contact Info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> 1098 (Childline) </a>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="mailto:toddler@gmail.com"> <i class="fas fa-envelope"></i> toddler@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Punjab, India - 144401</a>
+        </div>
+        
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <h3>Follow Us</h3>
+            <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> LinkedIn </a>
+            <a href="#"> <i class="fab fa-pinterest"></i> Pinterest </a>
+        </div>
+    </div>
+    
+    <div class="credit"> Copyright © 2024 <span>Toddlers</span> | All Rights Reserved </div>
+  </section>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="js/script.js"></script>
+  <script src="js/child-friendly.js"></script>
+</body>
+</html>
+
+

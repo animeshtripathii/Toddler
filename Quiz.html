@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rights Defender - Quiz</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/Quiz.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/child.css">
+    
+    <!-- Inline styles to match purple theme -->
+    <style>
+        body {
+            background-color: #f8f6ff !important; /* Soft lavender background */
+            color: #555555 !important; /* Medium gray text */
+        }
+        
+        .header {
+            background-color: #f8f6ff !important; /* Soft lavender background */
+            border-bottom: 1px solid #e6e0ff !important; /* Light purple border */
+        }
+        
+        .header .logo {
+            color: #9575cd !important; /* Medium purple */
+        }
+        
+        .header .logo i {
+            color: #9575cd !important; /* Medium purple */
+        }
+        
+        .header .icons div {
+            background-color: #ffffff !important; /* White background */
+            color: #555555 !important; /* Medium gray text */
+            border: 1px solid #e6e0ff !important; /* Light purple border */
+        }
+        
+        .header .icons div:hover {
+            background-color: #9575cd !important; /* Medium purple */
+            color: #ffffff !important; /* White */
+        }
+        
+        .navbar a {
+            color: #555555 !important; /* Medium gray text */
+        }
+        
+        .navbar a:hover,
+        .navbar a.active {
+            color: #7e57c2 !important; /* Deeper purple */
+            background-color: #ede7f6 !important; /* Very light purple */
+        }
+        
+        /* Quiz specific styles */
+        .quiz-container {
+            margin-top: 10rem;
+        }
+        
+        #quiz {
+            background-color: #ffffff !important; /* White background */
+            box-shadow: 0 2px 8px rgba(149, 117, 205, 0.15) !important; /* Purple shadow */
+            border: 1px solid #e6e0ff !important; /* Light purple border */
+        }
+        
+        #quiz::before {
+            background: linear-gradient(to right, #9575cd, #b39ddb, #7e57c2, #d1c4e9) !important; /* Purple gradient */
+        }
+        
+        #quiz h1 {
+            color: #7e57c2 !important; /* Deeper purple */
+        }
+        
+        #quiz h1 i {
+            color: #9575cd !important; /* Medium purple */
+        }
+        
+        .quiz-description p {
+            color: #555555 !important; /* Medium gray text */
+        }
+        
+        hr {
+            background-color: #e6e0ff !important; /* Light purple border */
+        }
+        
+        .question-container {
+            background-color: #f8f6ff !important; /* Soft lavender background */
+            border: 1px solid #e6e0ff !important; /* Light purple border */
+        }
+        
+        #question {
+            color: #555555 !important; /* Medium gray text */
+        }
+        
+        .option-btn {
+            background-color: #ffffff !important; /* White background */
+            color: #555555 !important; /* Medium gray text */
+            border: 1px solid #e6e0ff !important; /* Light purple border */
+        }
+        
+        .option-btn:hover, .option-btn:focus {
+            background-color: #ede7f6 !important; /* Very light purple */
+            border-color: #9575cd !important; /* Medium purple */
+            box-shadow: 0 4px 8px rgba(149, 117, 205, 0.15) !important; /* Purple shadow */
+        }
+        
+        .option-btn.correct {
+            background-color: #e8f5e9 !important; /* Light green background */
+            border-color: #81c784 !important; /* Light green */
+            color: #2e7d32 !important; /* Dark green */
+        }
+        
+        .option-btn.incorrect {
+            background-color: #fce4ec !important; /* Light pink background */
+            border-color: #f48fb1 !important; /* Pink */
+            color: #c2185b !important; /* Dark pink */
+        }
+        
+        #progress {
+            color: #555555 !important; /* Medium gray text */
+        }
+        
+        #progress span {
+            color: #9575cd !important; /* Medium purple */
+        }
+        
+        .back-btn {
+            background-color: #9575cd !important; /* Medium purple */
+        }
+        
+        .back-btn:hover {
+            background-color: #7e57c2 !important; /* Deeper purple */
+        }
+        
+        .mini-footer {
+            color: #555555 !important; /* Medium gray text */
+        }
+        
+        .mini-footer .credit {
+            color: #555555 !important; /* Medium gray text */
+        }
+        
+        .mini-footer .credit span {
+            color: #9575cd !important; /* Medium purple */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section starts -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <i class="fas fa-child"></i> Time Ahead Toddlers
+        </a>
+        
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        
+        <nav class="navbar">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="Quiz.html" class="active"><i class="fas fa-gamepad"></i> Games</a>
+            <a href="rights.html"><i class="fas fa-child"></i> Child Rights</a>
+            <a href="index.html#contact"><i class="fas fa-phone"></i> Helpline</a>
+            <a href="https://www.unicef.org/blog"><i class="fas fa-blog"></i> Blogs</a>
+        </nav>
+    </header>
+    <!-- Header section ends -->
+
+    <div class="quiz-container" data-aos="fade-up">
+        <div id="quiz">
+            <h1>Rights Defender <i class="fas fa-shield-alt"></i></h1>
+            <div class="quiz-description">
+                <p>Test your knowledge about children's rights with this interactive quiz!</p>
+            </div>
+            <hr>
+            
+            <div class="question-container">
+                <p id="question"></p>
+            </div>
+            
+            <div class="button-container">
+                <button id="bt0" class="option-btn"><span id="choice0"></span></button>
+                <button id="bt1" class="option-btn"><span id="choice1"></span></button>
+            </div>
+            
+            <hr>
+            
+            <div class="quiz-footer">
+                <a href="index.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+                <div id="progress">Question <span id="current">1</span> of <span id="total">10</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <div class="mini-footer">
+        <div class="credit">Copyright © 2024 <span>Toddlers</span> | All Rights Reserved</div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Quiz JavaScript -->
+    <script src="js/question.jss"></script>
+    <script src="js/question1.jss"></script>
+    <script src="js/question2.jss"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/child-friendly.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>

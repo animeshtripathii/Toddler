@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Toddler - Tool for Child Rights Awareness</title>
+        
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        
+        <!-- AOS CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/child.css">
+        
+        <!-- Inline styles to match purple theme -->
+        <style>
+            body {
+                background-color: #f8f6ff !important; /* Soft lavender background */
+            }
+            
+            .header {
+                background-color: #f8f6ff !important; /* Soft lavender background */
+                border-bottom: 1px solid #e6e0ff !important; /* Light purple border */
+            }
+            
+            .header .logo {
+                color: #9575cd !important; /* Medium purple */
+            }
+            
+            .header .logo i {
+                color: #9575cd !important; /* Medium purple */
+            }
+            
+            .header .search-form {
+                background-color: #ffffff !important; /* White background */
+                border: 1px solid #e6e0ff !important; /* Light purple border */
+            }
+            
+            .header .search-form label {
+                color: #9575cd !important; /* Medium purple */
+            }
+            
+            .header .icons div {
+                background-color: #ffffff !important; /* White background */
+                color: #555555 !important; /* Medium gray text */
+                border: 1px solid #e6e0ff !important; /* Light purple border */
+            }
+            
+            .header .icons div:hover {
+                background-color: #9575cd !important; /* Medium purple */
+                color: #ffffff !important; /* White */
+            }
+            
+            .home {
+                background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                          url('images/pattern-bg.png') !important;
+                background-color: #f8f6ff !important; /* Soft lavender background */
+            }
+            
+            .home .content h3 {
+                color: #7e57c2 !important; /* Deeper purple */
+            }
+            
+            .home .content h3 span {
+                color: #9575cd !important; /* Medium purple */
+            }
+            
+            .home .content p {
+                color: #555555 !important; /* Medium gray text */
+            }
+            
+            .btn {
+                background-color: #9575cd !important; /* Medium purple */
+                color: #ffffff !important; /* White */
+            }
+            
+            .btn:hover {
+                background-color: #7e57c2 !important; /* Deeper purple */
+            }
+            
+            .heading {
+                color: #555555 !important; /* Medium gray text */
+            }
+            
+            .heading span {
+                color: #9575cd !important; /* Medium purple */
+            }
+            
+            .packages .box-container .box {
+                background-color: #ffffff !important; /* White background */
+                border: 1px solid #e6e0ff !important; /* Light purple border */
+                box-shadow: 0 2px 8px rgba(149, 117, 205, 0.15) !important; /* Purple shadow */
+            }
+            
+            .packages .box-container .box:hover {
+                box-shadow: 0 5px 15px rgba(149, 117, 205, 0.25) !important; /* Purple shadow */
+            }
+            
+            .packages .box-container .box .image h3 {
+                background-color: rgba(255, 255, 255, 0.85) !important;
+                color: #7e57c2 !important; /* Deeper purple */
+            }
+            
+            .packages .box-container .box .content p {
+                color: #555555 !important; /* Medium gray text */
+            }
+            
+            .footer {
+                background-color: #f8f6ff !important; /* Soft lavender background */
+                border-top: 1px solid #e6e0ff !important; /* Light purple border */
+            }
+            
+            .footer .box-container .box h3 {
+                color: #7e57c2 !important; /* Deeper purple */
+            }
+            
+            .footer .box-container .box h3::before {
+                background-color: #b39ddb !important; /* Light purple */
+            }
+            
+            .footer .box-container .box a {
+                color: #555555 !important; /* Medium gray text */
+            }
+            
+            .footer .box-container .box a i {
+                color: #9575cd !important; /* Medium purple */
+            }
+            
+            .footer .box-container .box a:hover {
+                color: #9575cd !important; /* Medium purple */
+            }
+            
+            .footer .credit {
+                color: #555555 !important; /* Medium gray text */
+                border-top: 1px solid #e6e0ff !important; /* Light purple border */
+            }
+            
+            .footer .credit span {
+                color: #9575cd !important; /* Medium purple */
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Header section starts -->
+        <header class="header">
+            
+            <a href="#" class="logo">
+                <i class="fas fa-child"></i> Time Ahead Toddlers
+            </a>
+            
+            <form action="https://www.google.com/search" class="search-form">
+                <input type="text" placeholder="Search in Google" name="q" id="searchBox">
+                <label for="searchBox" class="fas fa-search"></label>
+            </form>
+            
+            <div class="icons">
+                <div class="fas fa-search" id="search-btn"></div>
+                <div class="fas fa-share" id="theme-btn"></div>
+                <div class="fas fa-bars" id="menu-btn"></div>
+            </div>
+            
+            <nav class="navbar">
+                <a href="#home"><i class="fas fa-home"></i> Home</a>
+                <a href="Quiz.html"><i class="fas fa-gamepad"></i> Games</a>
+                <a href="rights.html"><i class="fas fa-child"></i> Child Rights</a>
+                <a href="#contact"><i class="fas fa-phone"></i> Helpline</a>
+                <a href="https://www.unicef.org/blog"><i class="fas fa-blog"></i> Blogs</a>
+            </nav>
+        
+        </header>
+        <!-- Header section ends -->
+    
+        <!-- Home section starts -->
+        <section class="home" id="home">
+            
+            <div class="content" data-aos="fade-right">
+                <h3>Hey Buddies! <span>Ready to Learn About Your Rights?</span></h3>
+                <p>Hello Superstars! Do you know about your rights? Do you want to learn about them?
+                    Don't worry, here you will learn about them in a more playful way ⭐</p>
+                <a href="#packages" class="btn">Explore Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="image" data-aos="fade-left">
+                <img src="images/banner.png" alt="banner image">
+            </div>
+        
+        </section>
+        <!-- Home section ends -->
+    
+        <!-- For You section starts -->
+        <section class="packages" id="packages">
+            
+            <h1 class="heading" data-aos="fade-up">for <span>You</span></h1>
+            
+            <div class="box-container">
+                
+                <div class="box" data-aos="fade-up" data-aos-delay="150">
+                    <div class="image">
+                        <img src="images/blog-1.jpg" alt="Games">
+                        <h3>Games</h3>
+                    </div>
+                    
+                    <div class="content">
+                        <p>Want to test yourself with some quizzy challenge? Let's go and have fun while learning! ⭐</p>
+                        <a href="Quiz.html" class="btn">Play Now</a>
+                    </div>
+                </div>
+                
+                <div class="box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="image">
+                        <img src="images/blog-2.jpg" alt="My Rights">
+                        <h3>My Rights</h3>
+                    </div>
+                    
+                    <div class="content">
+                        <p>Learn about the Rights and Acts that specially belong to you and protect your future. ⭐</p>
+                        <a href="rights.html" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="box" data-aos="fade-up" data-aos-delay="450">
+                    <div class="image">
+                        <img src="images/blog-3.jpg" alt="Questions">
+                        <h3>Questions</h3>
+                    </div>
+                    
+                    <div class="content">
+                        <p>Questions in your mind? Just check it out. You may find answers to your curious thoughts! ⭐</p>
+                        <a href="#" class="btn">Get Answers</a>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+        <!-- For you section ends -->
+    
+        <!-- Stories & Updates section starts -->
+        <section class="packages" id="stories">
+            
+            <h1 class="heading" data-aos="fade-up">stories & <span>updates</span></h1>
+
+            <div class="box-container">
+                <div class="box" data-aos="fade-up" data-aos-delay="150">
+                    <div class="image">
+                        <img src="images/top-1.jpg" alt="NCPCR">
+                        <h3>NCPCR</h3>
+                    </div>
+                    
+                    <div class="content">
+                        <p>National Commission for Protection of Child Rights - Learn about your legal protections.</p>
+                        <a href="https://ncpcr.gov.in/" class="btn">Visit Site</a>
+                    </div>
+                </div>
+                
+                <div class="box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="image">
+                        <img src="images/top-2.jpg" alt="UNICEF">
+                        <h3>UNICEF</h3>
+                    </div>
+                    
+                    <div class="content">
+                        <p>United Nations Children's Fund - Global advocate for children's rights and wellbeing.</p>
+                        <a href="http://www.unicef.org" class="btn">Visit Site</a>
+                    </div>
+                </div>
+                
+                <div class="box" data-aos="fade-up" data-aos-delay="450">
+                    <div class="image">
+                        <img src="images/top-3.png" alt="Wikipedia">
+                        <h3>Wikipedia</h3>
+                    </div>
+                    
+                    <div class="content">
+                        <p>Learn more about children's rights and their history through this comprehensive resource.</p>
+                        <a href="https://en.wikipedia.org/wiki/Children%27s_rights" class="btn">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+        <!-- Stories & Updates section ends -->
+    
+        <!-- Contact section starts -->
+        <section class="footer" id="contact">
+            
+            <div class="box-container">
+                
+                <div class="box" data-aos="fade-up" data-aos-delay="150">
+                    <h3>Our Branches</h3>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> India </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> Russia </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> Canada </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+                </div>
+                
+                <div class="box" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Contact Info</h3>
+                    <a href="#"> <i class="fas fa-phone"></i> 1098 (Childline) </a>
+                    <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                    <a href="mailto:toddler@gmail.com"> <i class="fas fa-envelope"></i> toddler@gmail.com </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> Punjab, India - 144401</a>
+                </div>
+                
+                <div class="box" data-aos="fade-up" data-aos-delay="450">
+                    <h3>Follow Us</h3>
+                    <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
+                    <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
+                    <a href="#"> <i class="fab fa-linkedin"></i> LinkedIn </a>
+                    <a href="#"> <i class="fab fa-pinterest"></i> Pinterest </a>
+                </div>
+            
+            </div>
+            
+            <div class="credit"> Copyright © 2024 <span>Toddlers</span> | All Rights Reserved </div>
+        
+        </section>
+        <!-- Footer section ends -->
+    
+        <!-- JavaScript Libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+        <!-- Custom JavaScript -->
+        <script src="js/script.js"></script>
+        <script src="js/child-friendly.js"></script>
+    
+    </body>
+</html>
