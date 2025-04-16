@@ -1,0 +1,442 @@
+/* Remove all old styling */
+.decoration-item, 
+main.decorations-container, 
+.colour, 
+.colour_1, 
+.colour_2,
+header.decorations-header,
+body.body-old {
+  display: none !important;
+}
+
+/* Global Colors with Soft Pastel Theme */
+body {
+  background-color: #f8f6ff !important; /* Soft lavender background */
+  color: #555555 !important; /* Medium gray text */
+}
+
+.header {
+  background-color: #f8f6ff !important; /* Soft lavender background */
+  border-bottom: 1px solid #e6e0ff !important; /* Light purple border */
+}
+
+.header .logo {
+  color: #9575cd !important; /* Medium purple */
+}
+
+.header .navbar a {
+  color: #555555 !important; /* Medium gray */
+}
+
+.header .navbar a:hover, 
+.header .navbar a.active {
+  background-color: #d1c4e9 !important; /* Light purple */
+  color: #5e35b1 !important; /* Deep purple */
+}
+
+.header .icons div {
+  background-color: #ffffff !important; /* White background */
+  border: 1px solid #e6e0ff !important; /* Light purple border */
+}
+
+.header .icons div:hover {
+  background-color: #d1c4e9 !important; /* Light purple */
+  color: #5e35b1 !important; /* Deep purple */
+}
+
+.btn {
+  background-color: #9575cd !important; /* Medium purple */
+}
+
+.btn:hover {
+  background-color: #7e57c2 !important; /* Deeper purple */
+}
+
+.heading span {
+  color: #9575cd !important; /* Medium purple */
+}
+
+.heading span::before {
+  background: #b39ddb !important; /* Light purple */
+}
+
+/* Home section */
+.home .content h3 {
+  color: #7e57c2 !important; /* Deeper purple */
+}
+
+.home .content h3 span {
+  color: #9575cd !important; /* Medium purple */
+}
+
+/* Packages section */
+.packages .box-container .box {
+  background-color: #ffffff !important; /* White background */
+  border: 1px solid #e6e0ff !important; /* Light purple border */
+}
+
+.packages .box-container .box:hover {
+  box-shadow: 0 5px 10px rgba(149, 117, 205, 0.2) !important; /* Purple shadow */
+}
+
+.packages .box-container .box .image h3 {
+  background-color: #ede7f6 !important; /* Very light purple */
+  color: #5e35b1 !important; /* Deep purple */
+}
+
+/* Footer section */
+.footer {
+  background-color: #f8f6ff !important; /* Soft lavender background */
+  border-top: 1px solid #e6e0ff !important; /* Light purple border */
+}
+
+.footer .box-container .box h3 {
+  color: #9575cd !important; /* Medium purple */
+}
+
+.footer .box-container .box h3::before {
+  background-color: #b39ddb !important; /* Light purple */
+}
+
+.footer .box-container .box a:hover {
+  color: #9575cd !important; /* Medium purple */
+}
+
+.footer .box-container .box a:hover i {
+  color: #7e57c2 !important; /* Deeper purple */
+}
+
+.footer .credit span {
+  color: #9575cd !important; /* Medium purple */
+}
+
+/* Rights Banner Styles */
+.rights-banner {
+  background: linear-gradient(rgba(149, 117, 205, 0.9), rgba(179, 157, 219, 0.9)), url('../images/banner.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  padding: 15rem 7% 8rem !important;
+  text-align: center !important;
+  color: white !important;
+  position: relative !important;
+  z-index: 2 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.rights-banner h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: white !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.rights-banner p {
+  font-size: 1.8rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: white !important;
+}
+
+/* Rights Container */
+.rights-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  background-color: #f8f6ff !important; /* Soft lavender background */
+  position: relative;
+  z-index: 2;
+}
+
+/* Statistics Section */
+.child-rights-statistics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.stat-card {
+  background-color: #ffffff !important; /* White background */
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(149, 117, 205, 0.15) !important; /* Purple shadow */
+  transition: all 0.3s ease;
+  border: 1px solid #e6e0ff !important; /* Light purple border */
+  border-top: 4px solid #9575cd !important; /* Medium purple accent */
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(149, 117, 205, 0.25) !important; /* Purple shadow */
+}
+
+.stat-card .number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #9575cd !important; /* Medium purple */
+  margin-bottom: 1rem;
+}
+
+.stat-card .description {
+  font-size: 1.6rem;
+  color: #555555 !important; /* Medium gray text */
+}
+
+/* Quote Section */
+.child-rights-quote {
+  background-color: #ffffff !important; /* White background */
+  border-left: 5px solid #9575cd !important; /* Medium purple accent */
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 900px;
+  box-shadow: 0 2px 8px rgba(149, 117, 205, 0.15) !important; /* Purple shadow */
+  border: 1px solid #e6e0ff !important; /* Light purple border */
+}
+
+.child-rights-quote p {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #555555 !important; /* Medium gray text */
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.child-rights-quote cite {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #9575cd !important; /* Medium purple */
+  display: block;
+  text-align: right;
+}
+
+/* Rights Cards */
+.right-card {
+  display: flex;
+  background-color: #ffffff !important; /* White background */
+  border-radius: 1rem;
+  border: 1px solid #e6e0ff !important; /* Light purple border */
+  border-left: 5px solid #9575cd !important; /* Medium purple accent */
+  box-shadow: 0 2px 8px rgba(149, 117, 205, 0.15) !important; /* Purple shadow */
+  margin-bottom: 5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.right-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(149, 117, 205, 0.25) !important; /* Purple shadow */
+}
+
+.right-image {
+  flex: 0 0 40%;
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+  background-color: #ffffff !important; /* White background */
+}
+
+.right-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.right-card:hover .right-image img {
+  transform: scale(1.05);
+}
+
+.right-content {
+  flex: 0 0 60%;
+  padding: 3rem;
+  background-color: #ffffff !important; /* White background */
+}
+
+.right-content h2 {
+  color: #7e57c2 !important; /* Deeper purple */
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.right-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.8rem;
+  left: 0;
+  width: 6rem;
+  height: 0.3rem;
+  background-color: #b39ddb !important; /* Light purple */
+  border-radius: 0.25rem;
+}
+
+.right-content p {
+  color: #555555 !important; /* Medium gray text */
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.right-content p:last-child {
+  margin-bottom: 0;
+}
+
+.right-content p strong {
+  font-weight: 700;
+  color: #9575cd !important; /* Medium purple */
+}
+
+/* CTA Section - Make it stand out */
+.cta-section {
+  background: linear-gradient(rgba(79, 195, 247, 0.9), rgba(129, 199, 132, 0.9)) !important;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  margin: 5rem 0;
+  color: white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important; /* Consistent shadow */
+}
+
+.cta-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: white !important;
+}
+
+.cta-section p {
+  font-size: 1.8rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: white !important;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 1.2rem 3rem;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary-btn {
+  background-color: #FF5757;
+  color: white !important;
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #FF5757 !important;
+}
+
+.cta-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .rights-banner {
+    padding: 12rem 5% 6rem;
+  }
+  
+  .rights-banner h1 {
+    font-size: 3.5rem;
+  }
+  
+  .right-card {
+    flex-direction: column;
+  }
+  
+  .right-image {
+    flex: 0 0 100%;
+    height: 30rem;
+  }
+  
+  .right-content {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .rights-banner {
+    padding: 10rem 5% 5rem;
+  }
+  
+  .rights-banner h1 {
+    font-size: 3rem;
+  }
+  
+  .rights-banner p {
+    font-size: 1.6rem;
+  }
+  
+  .rights-container {
+    padding: 4rem 1.5rem;
+  }
+  
+  .right-content {
+    padding: 2rem;
+  }
+  
+  .right-content h2 {
+    font-size: 2rem;
+  }
+  
+  .child-rights-statistics {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .rights-banner h1 {
+    font-size: 2.5rem;
+  }
+  
+  .rights-banner p {
+    font-size: 1.5rem;
+  }
+  
+  .right-image {
+    height: 25rem;
+  }
+  
+  .right-content {
+    padding: 1.5rem;
+  }
+  
+  .right-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .right-content p {
+    font-size: 1.5rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .cta-section p {
+    font-size: 1.6rem;
+  }
+}
+  
+  
